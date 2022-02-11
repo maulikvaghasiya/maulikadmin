@@ -22,30 +22,33 @@ include "include/connection.php";
         <table class="table table-striped table-hover table-bordered" id="myTable">
             <thead>
                 <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">TITLE</th>
-                    <th scope="col">BRAND</th>
+                    <th scope="col">Order No.</th>
+                    <th scope="col">Product Details</th>
                     <th scope="col">QTY</th>
-                    <th scope="col">QTY_PER SET</th>
-                    <th scope="col">MRP</th>
-                    <th scope="col">PRICE</th>
-                    <th scope="col">DESCRIPTION</th>
+                    <th scope="col">Total Amount</th>
+                    <th scope="col">Customer Details</th>
+                    <th scope="col">Order Date</th>
                     <th scope="col">IMAGE</th>
-                    <th scope="col">HSN_CODE</th>
-                    <th scope="col">GST_NO.</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                $sql = "SELECT * FROM `product`";
+                $sql = "SELECT * FROM sales_product_details LEFT OUTER JOIN 
+                sales_orders ON sales_product_details.sales_orders_idsales_orders=idsales_orders 
+                LEFT OUTER JOIN product on product_idproduct=product.idproduct";
                 $result = mysqli_query($conn,$sql); 
+                $cnt=1;
                 while($rows = mysqli_fetch_assoc($result)){
+
                    echo" <tr>
-                        <th>". $rows['idproduct'] ."</th>
-                        <td>". $rows['name'] ."</td>
-                        <td>". $rows['brand'] ."</td>
-                        <td>". $rows['minimum_set_qut-pur'] ."</td>
-                        <th>". $rows['quantity_of_1_set'] ."</th>
+                        <th>ODR00". $rows['idsales_orders']."</th>
+                        <td><b>Product Code:</b> PDR00". $rows['idproduct'] ."
+                            <b>Quantity:</b> ".$rows['Qty']."</td>
+                        <td>". $rows['Qty'] ."</td>
+                        <td>". $rows['net_amount'] ."</td>
+                        <th><b>Name:</b><br>
+                            <b>Address:</b><br>
+                            <b>City:</b>". $rows[''] ."</th>
                         <td>". $rows['MRP'] ."</td>
                         <td>". $rows['price'] ."</td>
                         <td>". $rows['description'] ."</td>";?>
@@ -54,6 +57,7 @@ include "include/connection.php";
                         <td>". $rows['HSN_code'] ."</td>
                         <td>". $rows['GST_rate'] ."</td>
                     </tr>";   
+                    $cnt++;
                 }
             ?>
             </tbody>

@@ -38,22 +38,23 @@ include "include/connection.php";
             <tbody>
                 <?php
                 $sql = "SELECT * FROM `product`";
-                $result = mysqli_query($conn,$sql); 
+                $result = mysqli_query($conn,$sql);
+                $cnt=1; 
                 while($rows = mysqli_fetch_assoc($result)){
                    echo" <tr>
-                        <th>". $rows['idproduct'] ."</th>
-                        <td>". $rows['name'] ."</td>
+                        <th>". $cnt ."</th>
+                        <td>". $rows['pname'] ."</td>
                         <td>". $rows['brand'] ."</td>
                         <td>". $rows['minimum_set_qut-pur'] ."</td>
-                        <th>". $rows['quantity_of_1_set'] ."</th>
+                        <td>". $rows['quantity_of_1_set'] ."</td>
                         <td>". $rows['MRP'] ."</td>
                         <td>". $rows['price'] ."</td>
-                        <td>". $rows['description'] ."</td>";?>
-                <th><img src="dist/img/<?php echo $rows['image']; ?>" width="50px"></th>
-                <?php echo"
+                        <td>". $rows['description'] ."</td>
+                        <td><img src='".$rows['image']."' height='100' width='100'>"."</td>
                         <td>". $rows['HSN_code'] ."</td>
                         <td>". $rows['GST_rate'] ."</td>
-                    </tr>";   
+                    </tr>";
+                    $cnt++;   
                 }
             ?>
             </tbody>

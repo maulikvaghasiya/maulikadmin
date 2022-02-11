@@ -40,7 +40,7 @@ include "include/connection.php";
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">
-            <p class="login-box-msg">Sign in to start your session</p>
+            <p class="login-box-msg">Sign in to start your Admin</p>
             <form method="POST">
                 <div class="form-group has-feedback">
                     <input type="email" class="form-control" placeholder="Email" name="u_email">
@@ -62,18 +62,20 @@ include "include/connection.php";
              { 
               $u_email = $_POST['u_email'];
               $u_password = $_POST['u_password'];
-              $login_select = "SELECT * FROM `admin` WHERE email_id='$u_email' AND password='$u_password'";
+              $login_select = "SELECT * FROM `admin` WHERE email_id='$u_email' AND pass='$u_password'";
               $result_login_select = mysqli_query($conn, $login_select);
+            
               if (mysqli_num_rows($result_login_select) > 0)
               {
                 $row = mysqli_fetch_assoc($result_login_select);
-                session_start();
-                $_SESSION["u_id"] = $row['idadmin'];
-                $_SESSION["u_name"] = $row['first_name'];
-                $_SESSION["u_email"] = $row['email_id'];
-                $_SESSION["u_surname"] = $row['last_name'];
+                setcookie("idadmin",$row['idadmin'],time() + 84600,"/");
+                
+                // $_SESSION["u_id"] = $row['idadmin'];
+                // $_SESSION["u_name"] = $row['first_name'];
+                // $_SESSION["u_email"] = $row['email_id'];
+                // $_SESSION["u_surname"] = $row['last_name'];
                 //$_SESSION["u_contact"] = $row['u_contact'];
-                $_SESSION["u_image"] = $row['image'];
+               //$_SESSION["u_image"] = $row['image'];
                 //$_SESSION["isadmin"] = $row['isadmin'];
                 
                 

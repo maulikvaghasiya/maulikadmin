@@ -1,11 +1,5 @@
 <?php
-session_start();
-include 'include/connection.php';
-// remove all session variables
-session_unset();
+setcookie("idadmin","",time() + 86400,"/");
 
-// destroy the session
-session_destroy();
-
- header("Location: index.php");
+header("Location: index.php");
 ?>

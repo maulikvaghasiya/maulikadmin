@@ -10,9 +10,9 @@ include "include/connection.php";
     <section class="content-header">
         <h1>
             All Category
-
+            <a href="add_category.php"><button class="btn btn-primary pull-right btn-sm" type="submit">Add
+                    Category</button></a>
         </h1>
-
     </section>
 
     <!-- Main content -->
@@ -40,11 +40,11 @@ include "include/connection.php";
                     <td><?php echo $row['categoryname']; ?></td>
                     <td>
                         <a href="edit_cat.php?id=<?php echo $row['idcategory'];  ?>"><i class="fa fa-edit"></i></a>
-                        <form action="update_code.php" method="POST">
-                            <input type="hidden" name="cate_delete_id" value="<?php echo $row['idcategory'];?>">
+                        <!-- <form action="update_code.php" method="POST">
+                            <input type="hidden" name="cate_delete_id" value="<?php #echo $row['idcategory'];?>">
                             <button type="submit" name="cate_delete_btn" class="btn btn-danger">delete</button>
 
-                        </form>
+                        </form> -->
                     </td>
                 </tr>
                 <?php }} ?>

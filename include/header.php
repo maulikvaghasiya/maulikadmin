@@ -1,23 +1,35 @@
 <?php
-session_start();
+
 include "connection.php";
 
-if (empty($_SESSION["u_id"])) 
+if (empty($_COOKIE["idadmin"])) 
 {
    header("Location: index.php");
-   
 }
 else
 {
-
-          $u_id = $_SESSION["u_id"];
-          $u_name =  $_SESSION["u_name"];
-          $u_email =  $_SESSION["u_email"];
-          $u_surname =  $_SESSION["u_surname"];
+        $id = $_COOKIE['idadmin'];
+        //   $u_id = $_SESSION["u_id"];
+        //   $u_name =  $_SESSION["u_name"];
+        //   $u_email =  $_SESSION["u_email"];
+        //   $u_surname =  $_SESSION["u_surname"];
           //$u_contact =  $_SESSION["u_contact"];
-          $u_image =  $_SESSION["u_image"];
+         // $u_image =  $_SESSION["u_image"];
           //$isadmin =  $_SESSION["isadmin"];
           // $isadmin =  $_SESSION["isadmin"];
+          $sql = "SELECT * FROM `admin` WHERE idadmin=$id";
+          $result = mysqli_query($conn,$sql);
+          
+          if(mysqli_num_rows($result) == 1 ){
+              $row = mysqli_fetch_assoc($result);
+
+              $name = $row['first_name'];
+              $surname = $row['last_name'];
+              $emailid = $row['email_id'];
+              $img = $row['image'];
+              
+              
+          }
 
 
 ?>
@@ -88,13 +100,14 @@ else
                         <!-- User Account: style can be found in dropdown.less -->
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="dist/img/<?php echo $u_image; ?>" class="user-image" alt="User Image">
-                                <span class="hidden-xs"><?php echo $u_name; ?></span>
+                                <img src="dist/img/<?php echo $img; ?>" class="user-image" alt="User Image">
+                                <span class="hidden-xs">
+                                    <?php echo $name; ?></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header">
-                                    <img src="dist/img/<?php echo $u_image; ?>" class="img-circle" alt="User Image">
+                                    <img src="dist/img/<?php echo $img; ?>" class="img-circle" alt="User Image">
 
                                     <p>
                                         <?php //echo $u_name; ?>

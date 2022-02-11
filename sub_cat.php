@@ -11,8 +11,9 @@ include "include/connection.php";
         <h1>
             All Sub-Category
 
+            <a href="add_subcat.php"><button class="btn btn-primary pull-right btn-sm" type="submit">Add
+                    Sub-Category</button></a>
         </h1>
-
     </section>
 
     <!-- Main content -->
@@ -36,9 +37,9 @@ include "include/connection.php";
                 <tr>
                     <td><?php echo $row['subcategoryname']; ?></td>
                     <td>
-                        <a href="edit_sub-cat.php?id=<?php echo $row['idsubcategory'];  ?>"><i
+                        <a href="edit_sub-cat.php?subid=<?php  echo $row['idsubcategory'];  ?>"><i
                                 class="fa fa-edit"></i></a>
-                        <i class="fa fa-trash"></i></a>
+
                     </td>
                 </tr>
                 <?php }} ?>

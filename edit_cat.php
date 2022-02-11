@@ -17,7 +17,8 @@ include "include/connection.php";
             $result = mysqli_query($conn,$sql);
             $num = mysqli_num_rows($result);
             if ($num > 0) {
-                foreach($result as $row){?>
+                foreach($result as $row){
+            ?>
             <input type="hidden" name="cat_id" value="<?php echo $row['idcategory']; ?>">
             <div class="form-group">
                 <label>Category Name</label>

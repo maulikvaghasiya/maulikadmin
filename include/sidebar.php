@@ -5,10 +5,10 @@
          <!-- Sidebar user panel -->
          <div class="user-panel">
              <div class="pull-left image">
-                 <img src="dist/img/<?php echo $u_image; ?>" class="img-circle" alt="User Image">
+                 <img src="dist/img/<?php echo $img; ?>" class="img-circle" alt="User Image">
              </div>
              <div class="pull-left info">
-                 <h5><?php echo $u_name; ?></h5>
+                 <h5><?php echo $name; ?></h5>
              </div>
          </div>
 
