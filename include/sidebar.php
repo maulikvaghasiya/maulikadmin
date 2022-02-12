@@ -27,6 +27,7 @@
                      <li><a href="sub_cat.php"><i class="fa fa-circle-o"></i>SUBCATEGORIES</a></li>
                      <li><a href="order.php"><i class="fa fa-circle-o"></i>ODERS</a></li>
                      <li><a href="user1.php"><i class="fa fa-circle-o"></i>USERS</a></li>
+                     <li><a href="requests.php"><i class="fa fa-circle-o"></i>REQUESTS</a></li>
                  </ul>
              </li>
          </ul>

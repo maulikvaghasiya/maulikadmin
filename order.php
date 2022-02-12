@@ -33,11 +33,10 @@ include "include/connection.php";
             </thead>
             <tbody>
                 <?php
-                $sql = "SELECT * FROM sales_product_details LEFT OUTER JOIN 
-                sales_orders ON sales_product_details.sales_orders_idsales_orders=idsales_orders 
-                LEFT OUTER JOIN product on product_idproduct=product.idproduct";
+                $sql = "SELECT * FROM sales_product_details LEFT OUTER JOIN sales_orders ON sales_product_details.sales_orders_idsales_orders=idsales_orders LEFT OUTER JOIN product on product_idproduct=product.idproduct JOIN user ON sales_orders.User_idRegister=user.idRegister JOIN area ON user.area_area_pincode = area.area_pincode JOIN city ON area.city_idcity=city.idcity JOIN state ON city.state_idstate=state.idstate";
                 $result = mysqli_query($conn,$sql); 
                 $cnt=1;
+                
                 while($rows = mysqli_fetch_assoc($result)){
 
                    echo" <tr>
@@ -46,16 +45,12 @@ include "include/connection.php";
                             <b>Quantity:</b> ".$rows['Qty']."</td>
                         <td>". $rows['Qty'] ."</td>
                         <td>". $rows['net_amount'] ."</td>
-                        <th><b>Name:</b><br>
-                            <b>Address:</b><br>
-                            <b>City:</b>". $rows[''] ."</th>
-                        <td>". $rows['MRP'] ."</td>
-                        <td>". $rows['price'] ."</td>
-                        <td>". $rows['description'] ."</td>";?>
-                <th><img src="dist/img/<?php echo $rows['image']; ?>" width="50px"></th>
-                <?php echo"
-                        <td>". $rows['HSN_code'] ."</td>
-                        <td>". $rows['GST_rate'] ."</td>
+                        <td><b>Name:</b>". $rows['name'] ."<br>
+                            <b>Address:</b>". $rows['address'] ."<br>
+                            <b>City:</b>". $rows['city_name'] ."</td>
+                        <td>". $rows['order_date'] ."</td>
+                        <td><img src='".$rows['image']."' height='100' width='100'>"."</td>
+                        
                     </tr>";   
                     $cnt++;
                 }

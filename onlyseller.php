@@ -40,7 +40,7 @@ include "include/connection.php";
             </thead>
             <tbody>
                 <?php
-                $sql = "SELECT * FROM `user` WHERE is_seller = 1";
+                $sql = "SELECT * FROM `user` join bank on bank.idBank = user.Bank_idBank  WHERE is_seller = 1";
                 $result = mysqli_query($conn,$sql);
 
                 while($rows = mysqli_fetch_assoc($result)){
@@ -53,7 +53,7 @@ include "include/connection.php";
                         <td>". $rows['mobile_number'] ."</td>
                         <td>". $rows['pancard'] ."</td>
                         <td>". $rows['addhar_card'] ."</td>
-                        <td>". $rows['bankaccount_number'] ."</td>
+                        <td>". $rows['Account_number'] ."</td>
                         <td>". $rows['address'] ."</td>
                         <td>". $rows['commissionn_rate'] ." %</td>
                     </tr>";   
