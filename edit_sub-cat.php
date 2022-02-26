@@ -8,9 +8,9 @@ include "include/connection.php";
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <!-- Main content -->
-    <div class="row ">
+    <section class="content-header ">
         <!-- Form -->
-        <form action="update_code.php" class="add-post-form col-md-6" method="POST">
+        <form action="update_code.php" class="add-post-form " method="POST">
             <?php
             $sub_cat_id = $_GET['subid'];
             $sql = "SELECT * FROM `subcategory` where idsubcategory=$sub_cat_id";
@@ -22,15 +22,22 @@ include "include/connection.php";
             <input type="hidden" name="sub_cat_id" value="<?php echo $row['idsubcategory']; ?>">
 
             <div class="form-group">
-                <label>SubCategory Name</label>
+                <label class="form-label">
+                    <h4>
+                        Sub Category Name :
+                    </h4>
+                </label>
                 <input type="text" name="sub_cat_name" class="form-control"
                     value="<?php echo $row['subcategoryname']; ?>" placeholder="subCategory Name" required />
             </div>
             <form id="createCategory" class="" method="POST">
                 <div class="form-group">
-                    <label>Select Category</label>
-                    <select name="subid">
-                        <?php
+                    <label class="control-label">
+                        <h4>Select Category :</h4>
+                    </label><br>
+                    <select name="subid" class="form-control" required>
+                        <option selected disabled value="">Please select category...
+                            <?php
                   $selectcategory="SELECT * FROM category";
                   $res=mysqli_query($conn,$selectcategory);
                   $num=mysqli_num_rows($res);
@@ -40,15 +47,16 @@ include "include/connection.php";
                             $value= $row["idcategory"];
                             }      
                    }
-                   ?>
+                   ?></option>
                     </select>
+
                 </div>
                 <input type="submit" name="updatesubcat" class="btn btn-primary" value="Update" />
             </form>
 
         </form>
         <!-- /Form -->
-    </div>
+    </section>
     <!-- /.content -->
     <?php
                 }

@@ -19,26 +19,7 @@ include "include/connection.php";
     <section class="content">
         <!-- Small boxes (Stat box) -->
         <div class="row">
-            <div class="col-lg-4 col-xs-8">
-                <!-- small box -->
-                <div class="small-box bg-aqua">
-                    <div class="inner">
-                        <h3>
-                            <?php
-                             $sql = "SELECT * FROM `sales_orders`";
-                             $result = mysqli_query($conn,$sql);
-                             $num = mysqli_num_rows($result);
-                             echo $num;
-                          ?>
-                        </h3>
-                        <p> order</p>
-                    </div>
-                    <div class="icon">
-                        <i class="ion ion-bag"></i>
-                    </div>
-                    <a href="order.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
+
             <!-- ./col -->
             <div class="col-lg-4 col-xs-8">
                 <!-- small box -->
@@ -51,10 +32,10 @@ include "include/connection.php";
                             $num = mysqli_num_rows($result);
                             echo $num;
                           ?></h3>
-                        <p>Product</p>
+                        <p>PRODUCT</p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-stats-bars"></i>
+                        <i class="ion-tshirt"></i>
                     </div>
                     <a href="product.php" class="small-box-footer">More info <i
                             class="fa fa-arrow-circle-right"></i></a>
@@ -72,10 +53,10 @@ include "include/connection.php";
                             $num = mysqli_num_rows($result);
                             echo $num;
                           ?></h3>
-                        <p>Category</p>
+                        <p>CATEGORY</p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-person-add"></i>
+                        <i class="ion ion-grid"></i>
                     </div>
                     <a href="category.php" class="small-box-footer">More info <i
                             class="fa fa-arrow-circle-right"></i></a>
@@ -92,18 +73,38 @@ include "include/connection.php";
                             $num = mysqli_num_rows($result);
                             echo $num;
                             ?></h3>
-                        <p>Subcategory</p>
+                        <p>SUBCATEGORY</p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-pie-graph"></i>
+                        <i class="ion ion-grid"></i>
                     </div>
                     <a href="sub_cat.php" class="small-box-footer">More info <i
                             class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
-            <div class="col-lg-4 col-xs-6">
+            <div class="col-lg-4 col-xs-8">
                 <!-- small box -->
                 <div class="small-box bg-aqua">
+                    <div class="inner">
+                        <h3>
+                            <?php
+                             $sql = "SELECT * FROM `sales_orders`";
+                             $result = mysqli_query($conn,$sql);
+                             $num = mysqli_num_rows($result);
+                             echo $num;
+                          ?>
+                        </h3>
+                        <p>ORDER</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion-locked"></i>
+                    </div>
+                    <a href="order.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-xs-6">
+                <!-- small box -->
+                <div class="small-box bg-green">
                     <div class="inner">
                         <h3><?php
                             $sql = "SELECT * FROM `user`";
@@ -114,9 +115,31 @@ include "include/connection.php";
                         <p>USERS</p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-pie-graph"></i>
+                        <i class="fa fa-user"></i>
                     </div>
-                    <a href="user1.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="user.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-xs-8">
+                <!-- small box -->
+                <div class="small-box bg-aqua">
+                    <div class="inner">
+                        <h3>
+                            <?php
+                             $sql = "SELECT * FROM user WHERE is_request=1 AND is_seller=0;
+                             ";
+                             $result = mysqli_query($conn,$sql);
+                             $num = mysqli_num_rows($result);
+                             echo $num;
+                          ?>
+                        </h3>
+                        <p>REQUEST</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion-person-add"></i>
+                    </div>
+                    <a href="requests.php" class="small-box-footer">More info <i
+                            class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
 

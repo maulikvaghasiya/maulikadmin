@@ -11,8 +11,8 @@ include "include/connection.php";
         <h1>
             All Buyer
 
-            <a href="onlybuyer.php"><button class="btn btn-primary pull-right btn-sm ml-3"
-                    type="submit">Buyer</button></a>
+            <a href="onlybuyer.php"><button style="margin-left: 10px !important;"
+                    class="btn btn-primary pull-right btn-sm ml-3" type="submit">Buyer</button></a>
             <a href="onlyseller.php"><button class="btn btn-primary pull-right btn-sm" type="submit">Seller</button></a>
         </h1>
 
@@ -22,7 +22,7 @@ include "include/connection.php";
     <section class="content">
         <!-- Small boxes (Stat box) -->
 
-        <table class="table table-striped table-hover table-bordered" id="myTable">
+        <table class="table table-hover " id="employee_data">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
@@ -41,7 +41,7 @@ include "include/connection.php";
             </thead>
             <tbody>
                 <?php
-                $sql = "SELECT * FROM `user` WHERE is_seller = 0";
+                $sql = "SELECT * FROM `user` WHERE is_seller = 0 ORDER BY `idRegister` ASC";
                 $result = mysqli_query($conn,$sql);
 
                 while($rows = mysqli_fetch_assoc($result)){
@@ -50,7 +50,7 @@ include "include/connection.php";
                         <td>". $rows['email_id'] ."</td>
                         <td>". $rows['name'] ."</td>
                         <td>". $rows['bussiness_name'] ."</td>
-                        <th>". $rows['gst_number'] ."</th>
+                        <td>". $rows['gst_number'] ."</td>
                         <td>". $rows['mobile_number'] ."</td>
                         <td>". $rows['pancard'] ."</td>
                         <td>". $rows['addhar_card'] ."</td>
@@ -66,9 +66,14 @@ include "include/connection.php";
     </section>
     <!-- /.content -->
 </div>
+<script>
+$(document).ready(function() {
+    $('#employee_data').DataTable();
+});
+</script>
 <?php
 
 include 'include/footer.php';
 
 ?>
-<!-- <td>". $rows['bankaccount_number'] ."</td> -->
+<!-- <td>"ccount_number'] ."</td> -->

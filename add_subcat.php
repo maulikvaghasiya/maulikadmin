@@ -11,11 +11,22 @@ include 'include/connection.php';
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h2 class="admin-heading">Add New Sub-Category</h2>
-        <form id="createCategory" class="" method="POST">
+        <form id="createCategory needs-validation" class="" method="POST">
+            <label style="margin-top: 10px !important;">
+                <h4>Sub-Category Name : </h4>
+            </label>
+
+            <input type="text" class="form-control" name="catname" placeholder="Enter Sub-Category Name" required>
+
+
+
             <div class="form-group">
-                <label>Select Category</label>
-                <select name="sid">
-                    <?php
+                <label style="margin-top: 10px !important;">
+                    <h4>Select Category : </h4>
+                </label>
+                <select name="sid" class="form-control" required>
+                    <option selected disabled value="">Please Select Category
+                        <?php
                   $selectcategory="SELECT * FROM category";
                   $res=mysqli_query($conn,$selectcategory);
                   $num=mysqli_num_rows($res);
@@ -25,14 +36,19 @@ include 'include/connection.php';
                             $value= $row["idcategory"];
                             }      
                    }
-                   ?>
+                   ?></option>
                 </select>
             </div>
-            <input type="text" name="catname">
-            <input type="submit" name="save" class="btn add-new btn-primary" value="Submit">
+            <div style="margin-top: 13px !important;margin-bottom: 13px !important;">
+                <input type="submit" name="save" class="btn add-new btn-primary" value="Add">
+            </div>
         </form>
+
+
+
     </section>
 </div>
+
 <?php
 
     if(isset($_POST['save'])){
@@ -44,7 +60,9 @@ include 'include/connection.php';
         if($result){
             echo "<script>
             window.location.href='sub_cat.php' </script>";
-        }
+        }else{
+            echo '<script>alert("Sub-Category already added ");</script>';
+           }
         
     }
 

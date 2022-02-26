@@ -1,12 +1,15 @@
-<!-- /.content-wrapper -->
 <footer class="main-footer">
     <div class="pull-right hidden-xs">
-        <b>Version</b> 2.4.18
+        <b>Version</b> 1.0
     </div>
-    <strong>Copyright &copy; 2014-2019 <b>AdminLTE</b>.</strong> All rights
+    <strong> &copy; 2021-2022 <b>GrowMore</b>.</strong> All rights
     reserved.
 </footer>
-
+<script>
+$(document).ready(function() {
+    $('#employee_data').DataTable();
+});
+</script>
 <!-- Control Sidebar -->
 
 <!-- /.control-sidebar -->
@@ -15,15 +18,15 @@
 <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
-
-<!-- jQuery 3 -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
 $.widget.bridge('uibutton', $.ui.button);
 </script>
+<!-- jQuery 3 -->
+<!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
+<!-- jQuery UI 1.11.4 -->
+<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+
 <!-- Bootstrap 3.3.7 -->
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- Morris.js charts -->

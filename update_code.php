@@ -60,7 +60,8 @@ include 'include/connection.php';
         
          
     // }
-
+?>
+<?php
     $isseller = $_GET['isseller'];
     $isrequest = $_GET['isrequest'];
     $idregister = $_GET['idregister'];

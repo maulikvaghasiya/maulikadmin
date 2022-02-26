@@ -11,8 +11,8 @@ include "include/connection.php";
         <h1>
             All Request
 
-            <a href="acceptrequest.php"><button class="btn btn-primary pull-right btn-sm  mr-1" type="submit"
-                    name="seller">Accepted</button></a>
+            <a href="acceptrequest.php"><button style="margin-left: 10px !important;"
+                    class="btn btn-primary pull-right btn-sm  mr-1" type="submit" name="seller">Accepted</button></a>
             <a href="rejectrequest.php"><button class="btn btn-primary pull-right btn-sm  mr-2" type="submit"
                     name="buyer">Rejected</button></a>
 
@@ -24,7 +24,7 @@ include "include/connection.php";
     <section class="content">
         <!-- Small boxes (Stat box) -->
 
-        <table class="table table-striped table-hover table-bordered" id="myTable">
+        <table class="table table-hover table-bordered" id="employee_data">
             <thead>
                 <tr>
                     <th scope="col">SRNO</th>

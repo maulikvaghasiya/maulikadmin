@@ -19,7 +19,7 @@ include "include/connection.php";
     <section class="content">
         <!-- Small boxes (Stat box) -->
 
-        <table class="table table-striped table-hover table-bordered" id="myTable">
+        <table class="table table-hover " id="myTable">
             <thead>
                 <tr>
                     <th scope="col">Category</th>

@@ -10,7 +10,6 @@ include "include/connection.php";
     <section class="content-header">
         <h1>
             All Product
-
         </h1>
 
     </section>
@@ -19,7 +18,7 @@ include "include/connection.php";
     <section class="content">
         <!-- Small boxes (Stat box) -->
 
-        <table class="table table-striped table-hover table-bordered" id="myTable">
+        <table class="table table-hover" id="employee_data">
             <thead>
                 <tr>
                     <th scope="col">ID</th>

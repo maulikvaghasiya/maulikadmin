@@ -13,24 +13,67 @@
          </div>
 
 
-         <ul class="sidebar-menu" data-widget="tree">
-             <li class="active treeview">
-                 <a href="">
-                     <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-                     <span class="pull-right-container">
-                         <i class="fa fa-angle-left pull-right"></i>
-                     </span>
+         <ul class="sidebar-menu">
+             <li class="">
+                 <a href="product.php">
+                     <i class="ion-tshirt"></i>&nbsp;&nbsp;&nbsp; <span>PRODUCTS</span>
                  </a>
-                 <ul class="treeview-menu">
-                     <li><a href="product.php" class="active"><i class="fa fa-circle-o"></i>PRODUCTS</a></li>
-                     <li><a href="category.php" class="active"><i class="fa fa-circle-o"></i>CATEGORIES</a></li>
-                     <li><a href="sub_cat.php"><i class="fa fa-circle-o"></i>SUBCATEGORIES</a></li>
-                     <li><a href="order.php"><i class="fa fa-circle-o"></i>ODERS</a></li>
-                     <li><a href="user1.php"><i class="fa fa-circle-o"></i>USERS</a></li>
-                     <li><a href="requests.php"><i class="fa fa-circle-o"></i>REQUESTS</a></li>
-                 </ul>
              </li>
          </ul>
+         <ul class="sidebar-menu">
+             <li>
+                 <a href="category.php">
+                     <i class="ion ion-grid"></i> <span>CATEGORIES</span>
+                 </a>
+             </li>
+         </ul>
+         <ul class="sidebar-menu">
+             <li>
+                 <a href="sub_cat.php">
+                     <i class="ion ion-grid"></i> <span>SUBCATEGORIES</span>
+                 </a>
+             </li>
+         </ul>
+         <ul class="sidebar-menu">
+             <li>
+                 <a href="order.php">
+                     <i class="ion-locked"></i>&nbsp;&nbsp;&nbsp;&nbsp; <span>ODERS</span>
+                 </a>
+             </li>
+         </ul>
+         <ul class="sidebar-menu">
+             <li>
+                 <a href="user.php">
+                     <i class="fa fa-user"></i> <span>USERS</span>
+                 </a>
+             </li>
+         </ul>
+         <ul class="sidebar-menu">
+             <li>
+                 <a href="requests.php">
+                     <i class="ion-person-add"></i>&nbsp;&nbsp;&nbsp; <span>REQUESTS</span>
+                 </a>
+             </li>
+         </ul>
+         <ul class="sidebar-menu">
+             <li>
+                 <a href="requests.php">
+                     <i class="fa fa-rupee"></i> <span>ACCOUNT</span>
+                 </a>
+             </li>
+         </ul>
+
+         <!-- <ul class="">
+                     <li><a href=".php" class="active"><i class="fa fa-circle-o"></i></a></li>
+                     <li><a href=".php" class="active"><i class="fa fa-circle-o"></i></a></li>
+                     <li><a href=".php"><i class="fa fa-circle-o"></i></a></li>
+                     <li><a href=".php"><i class="fa fa-circle-o"></i></a></li>
+                     <li><a href=".php"><i class="fa fa-circle-o"></i></a></li>
+                     <li><a href=".php"><i class="fa fa-circle-o"></i></a></li>
+                 </ul> -->
+         </li>
+         </ul>
+
      </section>
      <!-- /.sidebar -->
  </aside>
