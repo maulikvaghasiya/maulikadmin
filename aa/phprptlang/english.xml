@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<ew-language date="2022/2/19" version="12.0.1" id="en" name="English" desc="English" author="e.World Technology Ltd.">
+<ew-language date="2022/2/28" version="12.0.1" id="en" name="English" desc="English" author="e.World Technology Ltd.">
   <!-- 
 	*** Important Notes:
 	1. Language ID should follow: https://developers.google.com/recaptcha/docs/language,
@@ -403,197 +403,20 @@
   <project>
     <phrase id="footertext" value="&amp;copy;2019 e.World Technology Ltd. All rights reserved." />
     <menu id="1">
-      <phrase id="menutext" value="admin" />
-    </menu>
-    <menu id="2">
-      <phrase id="menutext" value="area" />
-    </menu>
-    <menu id="3">
-      <phrase id="menutext" value="bank" />
-    </menu>
-    <menu id="4">
-      <phrase id="menutext" value="cart" />
-    </menu>
-    <menu id="5">
-      <phrase id="menutext" value="category" />
-    </menu>
-    <menu id="6">
-      <phrase id="menutext" value="city" />
-    </menu>
-    <menu id="7">
-      <phrase id="menutext" value="feedback" />
-    </menu>
-    <menu id="8">
-      <phrase id="menutext" value="image" />
-    </menu>
-    <menu id="9">
-      <phrase id="menutext" value="offers" />
-    </menu>
-    <menu id="10">
-      <phrase id="menutext" value="rating" />
-    </menu>
-    <menu id="11">
-      <phrase id="menutext" value="product" />
-    </menu>
-    <menu id="12">
-      <phrase id="menutext" value="return" />
-    </menu>
-    <menu id="13">
-      <phrase id="menutext" value="return has product" />
-    </menu>
-    <menu id="14">
-      <phrase id="menutext" value="sales orders" />
-    </menu>
-    <menu id="15">
-      <phrase id="menutext" value="sales product details" />
-    </menu>
-    <menu id="16">
-      <phrase id="menutext" value="state" />
-    </menu>
-    <menu id="17">
-      <phrase id="menutext" value="subcategory" />
-    </menu>
-    <menu id="18">
-      <phrase id="menutext" value="user" />
-    </menu>
-    <menu id="19">
-      <phrase id="menutext" value="wishlist" />
-    </menu>
-    <menu id="20">
       <phrase id="menutext" value="view 1" />
     </menu>
-    <table id="admin_base">
-      <phrase id="tblcaption" value="admin" />
-      <field id="idadmin">
-        <phrase id="fldcaption" value="idadmin" />
-      </field>
-      <field id="first_name">
-        <phrase id="fldcaption" value="first name" />
-      </field>
-      <field id="last_name">
-        <phrase id="fldcaption" value="last name" />
-      </field>
-      <field id="email_id">
-        <phrase id="fldcaption" value="email id" />
-      </field>
-      <field id="pass">
-        <phrase id="fldcaption" value="pass" />
-      </field>
-      <field id="image">
-        <phrase id="fldcaption" value="image" />
-      </field>
-    </table>
-    <table id="area_base">
-      <phrase id="tblcaption" value="area" />
-      <field id="area_pincode">
-        <phrase id="fldcaption" value="area pincode" />
-      </field>
-      <field id="area_name">
-        <phrase id="fldcaption" value="area name" />
-      </field>
-      <field id="city_idcity">
-        <phrase id="fldcaption" value="city idcity" />
-      </field>
-    </table>
-    <table id="bank_base">
-      <phrase id="tblcaption" value="bank" />
-      <field id="idbank">
-        <phrase id="fldcaption" value="id Bank" />
-      </field>
-      <field id="bankname">
-        <phrase id="fldcaption" value="Bank Name" />
-      </field>
-      <field id="account_number">
-        <phrase id="fldcaption" value="Account number" />
-      </field>
-      <field id="ifsc_code">
-        <phrase id="fldcaption" value="IFSC CODE" />
-      </field>
-      <field id="branch_name">
-        <phrase id="fldcaption" value="branch name" />
-      </field>
-      <field id="area_area_pincode">
-        <phrase id="fldcaption" value="area area pincode" />
-      </field>
-    </table>
-    <table id="cart_base">
-      <phrase id="tblcaption" value="cart" />
-      <field id="product_idproduct">
-        <phrase id="fldcaption" value="product idproduct" />
-      </field>
-      <field id="user_idregister">
-        <phrase id="fldcaption" value="User id Register" />
-      </field>
-      <field id="qty">
-        <phrase id="fldcaption" value="qty" />
-      </field>
-    </table>
-    <table id="category_base">
-      <phrase id="tblcaption" value="category" />
-      <field id="idcategory">
-        <phrase id="fldcaption" value="idcategory" />
-      </field>
-      <field id="categoryname">
-        <phrase id="fldcaption" value="categoryname" />
-      </field>
-    </table>
-    <table id="city_base">
-      <phrase id="tblcaption" value="city" />
-      <field id="idcity">
-        <phrase id="fldcaption" value="idcity" />
-      </field>
-      <field id="city_name">
-        <phrase id="fldcaption" value="city name" />
-      </field>
-      <field id="state_idstate">
-        <phrase id="fldcaption" value="state idstate" />
-      </field>
-    </table>
-    <table id="feedback_base">
-      <phrase id="tblcaption" value="feedback" />
-      <field id="user_idregister">
-        <phrase id="fldcaption" value="User id Register" />
-      </field>
-      <field id="product_idproduct">
-        <phrase id="fldcaption" value="product idproduct" />
-      </field>
-      <field id="feedback">
-        <phrase id="fldcaption" value="Feedback" />
-      </field>
-    </table>
-    <table id="image_base">
-      <phrase id="tblcaption" value="image" />
-      <field id="idimage">
-        <phrase id="fldcaption" value="idimage" />
-      </field>
-      <field id="imagepath">
-        <phrase id="fldcaption" value="imagepath" />
-      </field>
-      <field id="product_idproduct">
-        <phrase id="fldcaption" value="product idproduct" />
-      </field>
-    </table>
-    <table id="offers_base">
-      <phrase id="tblcaption" value="offers" />
-      <field id="idoffers">
-        <phrase id="fldcaption" value="idoffers" />
-      </field>
-      <field id="offer_discount_percentage">
-        <phrase id="fldcaption" value="offer discount percentage" />
-      </field>
-      <field id="offer_price">
-        <phrase id="fldcaption" value="offer price" />
-      </field>
-      <field id="offer_start_date">
-        <phrase id="fldcaption" value="offer start date" />
-      </field>
-      <field id="offer_end_date">
-        <phrase id="fldcaption" value="offer end date" />
-      </field>
-      <field id="offer_description">
-        <phrase id="fldcaption" value="offer description" />
-      </field>
-    </table>
+    <menu id="2">
+      <phrase id="menutext" value="sales orders" />
+    </menu>
+    <menu id="3">
+      <phrase id="menutext" value="view 2" />
+    </menu>
+    <menu id="4">
+      <phrase id="menutext" value="product" />
+    </menu>
+    <menu id="5">
+      <phrase id="menutext" value="product 1" />
+    </menu>
     <table id="product_base">
       <phrase id="tblcaption" value="product" />
       <field id="idproduct">
@@ -636,45 +459,6 @@
         <phrase id="fldcaption" value="User id Register" />
       </field>
     </table>
-    <table id="rating_base">
-      <phrase id="tblcaption" value="rating" />
-      <field id="product_idproduct">
-        <phrase id="fldcaption" value="product idproduct" />
-      </field>
-      <field id="user_idregister">
-        <phrase id="fldcaption" value="User id Register" />
-      </field>
-      <field id="rating">
-        <phrase id="fldcaption" value="rating" />
-      </field>
-    </table>
-    <table id="return_base">
-      <phrase id="tblcaption" value="return" />
-      <field id="id_return">
-        <phrase id="fldcaption" value="id return" />
-      </field>
-      <field id="return_date">
-        <phrase id="fldcaption" value="return date" />
-      </field>
-      <field id="reason">
-        <phrase id="fldcaption" value="reason" />
-      </field>
-      <field id="sales_orders_idsales_orders">
-        <phrase id="fldcaption" value="sales orders idsales orders" />
-      </field>
-    </table>
-    <table id="return_has_product_base">
-      <phrase id="tblcaption" value="return has product" />
-      <field id="product_idproduct">
-        <phrase id="fldcaption" value="product idproduct" />
-      </field>
-      <field id="return_id_return">
-        <phrase id="fldcaption" value="Return id return" />
-      </field>
-      <field id="qty">
-        <phrase id="fldcaption" value="qty" />
-      </field>
-    </table>
     <table id="sales_orders_base">
       <phrase id="tblcaption" value="sales orders" />
       <field id="idsales_orders">
@@ -714,105 +498,6 @@
         <phrase id="fldcaption" value="is payment" />
       </field>
     </table>
-    <table id="sales_product_details_base">
-      <phrase id="tblcaption" value="sales product details" />
-      <field id="sales_orders_idsales_orders">
-        <phrase id="fldcaption" value="sales orders idsales orders" />
-      </field>
-      <field id="product_idproduct">
-        <phrase id="fldcaption" value="product idproduct" />
-      </field>
-      <field id="qty">
-        <phrase id="fldcaption" value="Qty" />
-      </field>
-      <field id="price">
-        <phrase id="fldcaption" value="Price" />
-      </field>
-      <field id="discount">
-        <phrase id="fldcaption" value="discount" />
-      </field>
-    </table>
-    <table id="state_base">
-      <phrase id="tblcaption" value="state" />
-      <field id="idstate">
-        <phrase id="fldcaption" value="idstate" />
-      </field>
-      <field id="state_name">
-        <phrase id="fldcaption" value="state name" />
-      </field>
-    </table>
-    <table id="subcategory_base">
-      <phrase id="tblcaption" value="subcategory" />
-      <field id="idsubcategory">
-        <phrase id="fldcaption" value="idsubcategory" />
-      </field>
-      <field id="subcategoryname">
-        <phrase id="fldcaption" value="subcategoryname" />
-      </field>
-      <field id="category_idcategory">
-        <phrase id="fldcaption" value="category idcategory" />
-      </field>
-    </table>
-    <table id="user_base">
-      <phrase id="tblcaption" value="user" />
-      <field id="idregister">
-        <phrase id="fldcaption" value="id Register" />
-      </field>
-      <field id="email_id">
-        <phrase id="fldcaption" value="email id" />
-      </field>
-      <field id="password">
-        <phrase id="fldcaption" value="password" />
-      </field>
-      <field id="name">
-        <phrase id="fldcaption" value="name" />
-      </field>
-      <field id="bussiness_name">
-        <phrase id="fldcaption" value="bussiness name" />
-      </field>
-      <field id="is_request">
-        <phrase id="fldcaption" value="is request" />
-      </field>
-      <field id="gst_number">
-        <phrase id="fldcaption" value="gst number" />
-      </field>
-      <field id="mobile_number">
-        <phrase id="fldcaption" value="mobile number" />
-      </field>
-      <field id="pancard">
-        <phrase id="fldcaption" value="pancard" />
-      </field>
-      <field id="addhar_card">
-        <phrase id="fldcaption" value="addhar card" />
-      </field>
-      <field id="address">
-        <phrase id="fldcaption" value="address" />
-      </field>
-      <field id="is_seller">
-        <phrase id="fldcaption" value="is seller" />
-      </field>
-      <field id="commissionn_rate">
-        <phrase id="fldcaption" value="commissionn rate" />
-      </field>
-      <field id="admin_idadmin">
-        <phrase id="fldcaption" value="admin idadmin" />
-      </field>
-      <field id="bank_idbank">
-        <phrase id="fldcaption" value="Bank id Bank" />
-      </field>
-      <field id="area_area_pincode">
-        <phrase id="fldcaption" value="area area pincode" />
-      </field>
-    </table>
-    <table id="wishlist_base">
-      <phrase id="tblcaption" value="wishlist" />
-      <field id="user_idregister">
-        <phrase id="fldcaption" value="User id Register" />
-      </field>
-      <field id="product_idproduct">
-        <phrase id="fldcaption" value="product idproduct" />
-      </field>
-    </table>
     <table id="view1_base">
       <phrase id="tblcaption" value="view 1" />
       <field id="subcategoryname">
@@ -832,6 +517,48 @@
       </field>
       <field id="price">
         <phrase id="fldcaption" value="price" />
+      </field>
+    </table>
+    <table id="view2_base">
+      <phrase id="tblcaption" value="view 2" />
+      <field id="idsales_orders">
+        <phrase id="fldcaption" value="idsales orders" />
+      </field>
+      <field id="order_date">
+        <phrase id="fldcaption" value="order date" />
+      </field>
+      <field id="buyer_address">
+        <phrase id="fldcaption" value="buyer address" />
+      </field>
+      <field id="last_shipping_date">
+        <phrase id="fldcaption" value="last shipping date" />
+      </field>
+      <field id="tax_amount">
+        <phrase id="fldcaption" value="tax amount" />
+      </field>
+      <field id="net_amount">
+        <phrase id="fldcaption" value="net amount" />
+      </field>
+    </table>
+    <table id="product1_base">
+      <phrase id="tblcaption" value="product 1" />
+      <field id="idproduct">
+        <phrase id="fldcaption" value="idproduct" />
+      </field>
+      <field id="pname">
+        <phrase id="fldcaption" value="pname" />
+      </field>
+      <field id="brand">
+        <phrase id="fldcaption" value="brand" />
+      </field>
+      <field id="minimum_set_qut_pur">
+        <phrase id="fldcaption" value="minimum set qut pur" />
+      </field>
+      <field id="quantity_of_1_set">
+        <phrase id="fldcaption" value="quantity of 1 set" />
+      </field>
+      <field id="mrp">
+        <phrase id="fldcaption" value="MRP" />
       </field>
     </table>
   </project>

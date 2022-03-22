@@ -37,8 +37,10 @@ include "include/connection.php";
                 $sql = "SELECT * FROM sales_product_details LEFT OUTER JOIN sales_orders ON sales_product_details.sales_orders_idsales_orders=idsales_orders LEFT OUTER JOIN product on product_idproduct=product.idproduct JOIN user ON sales_orders.User_idRegister=user.idRegister JOIN area ON user.area_area_pincode = area.area_pincode JOIN city ON area.city_idcity=city.idcity JOIN state ON city.state_idstate=state.idstate";
                 $result = mysqli_query($conn,$sql);
                 $cnt=1;
+                $sql2 = "SELECT * FROM `user` left outer join product on user.idRegister = product.User_idRegister";
+                $result2 = mysqli_query($conn,$sql2);
                 
-                while($rows = mysqli_fetch_assoc($result)){
+                while(($rows = mysqli_fetch_assoc($result)) && ($rows2 = mysqli_fetch_assoc($result2))){
 
                    echo" <tr>
                         <th>ODR00". $rows['idsales_orders']."</th>
@@ -51,16 +53,15 @@ include "include/connection.php";
                             <b>City: </b>" . $rows['city_name'] ."</td>
                         <td>". $rows['order_date'] ."</td>
                         <td><img src='".$rows['image']."' height='100' width='100'>"."</td>
-                        <td></td>
+                        <td>". $rows2['bussiness_name'] ."</td>
                     </tr>";   
                     $cnt++;
                 }
-                $sql2 = "SELECT * FROM `user` left outer join product on user.idRegister = product.User_idRegister";
-                $result2 = mysqli_query($conn,$sql2);
+                
 
                 // while($row2=mysqli_fetch_assoc($result2)){
                 //     echo"<tr>
-                //     <td>". $row2['bussiness_name'] ."</td>
+                //     <td>". $row2['bussiness_name'] ."</td>   
                 //     </tr>";
                 // }
             ?>

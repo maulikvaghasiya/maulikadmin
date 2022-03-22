@@ -1,4 +1,7 @@
  <!-- Left side column. contains the logo and sidebar -->
+ <!-- Icon Font Stylesheet -->
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
  <aside class="main-sidebar">
      <!-- sidebar: style can be found in sidebar.less -->
      <section class="sidebar">
@@ -23,14 +26,14 @@
          <ul class="sidebar-menu">
              <li>
                  <a href="category.php">
-                     <i class="ion ion-grid"></i> <span>CATEGORIES</span>
+                     <i class="glyphicon glyphicon-th-large"></i> <span>CATEGORIES</span>
                  </a>
              </li>
          </ul>
          <ul class="sidebar-menu">
              <li>
                  <a href="sub_cat.php">
-                     <i class="ion ion-grid"></i> <span>SUBCATEGORIES</span>
+                     <i class="glyphicon glyphicon-th"></i> <span>SUBCATEGORIES</span>
                  </a>
              </li>
          </ul>
@@ -57,8 +60,9 @@
          </ul>
          <ul class="sidebar-menu">
              <li>
-                 <a href="requests.php">
-                     <i class="fa fa-rupee"></i> <span>ACCOUNT</span>
+                 <a href="/admin/aa/view2rpt.php">
+                     <i class="fa fa-chart-bar me-2"></i>&nbsp;
+                     <span>Report</span>
                  </a>
              </li>
          </ul>

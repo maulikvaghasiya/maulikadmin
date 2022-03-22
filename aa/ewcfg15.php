@@ -37,7 +37,7 @@ define(PROJECT_NAMESPACE . "PATH_DELIMITER", ((IS_WINDOWS) ? "\\" : "/")); // Ph
 define(PROJECT_NAMESPACE . "UNFORMAT_YEAR", 50); // Unformat year
 define(PROJECT_NAMESPACE . "PROJECT_NAME", "project1"); // Project name
 define(PROJECT_NAMESPACE . "CONFIG_FILE_FOLDER", PROJECT_NAME); // Config file name
-define(PROJECT_NAMESPACE . "RANDOM_KEY", 'VsPE2Xp5c6RrvWfM'); // Random key for encryption
+define(PROJECT_NAMESPACE . "RANDOM_KEY", 'vEjJCfz4f5Kvf21Y'); // Random key for encryption
 define(PROJECT_NAMESPACE . "ENCRYPTION_KEY", ''); // Encryption key for data protection
 define(PROJECT_NAMESPACE . "PROJECT_STYLESHEET_FILENAME", "phprptcss/project1.css"); // Project stylesheet file name
 define(PROJECT_NAMESPACE . "PROJECT_CHARSET", ""); // Project charset
@@ -53,8 +53,8 @@ $COMPOSITE_KEY_SEPARATOR = ","; // Composite key separator
 $LAZY_LOAD = TRUE; // Lazy loading of images
 $RELATED_PROJECT_ID = "";
 $BODY_CLASS = "hold-transition";
-$SIDEBAR_CLASS = "main-sidebar sidebar-light-info";
-$NAVBAR_CLASS = "main-header navbar navbar-expand navbar-light bg-white border-bottom";
+$SIDEBAR_CLASS = "main-sidebar sidebar-dark-danger";
+$NAVBAR_CLASS = "main-header navbar navbar-expand navbar-dark bg-danger";
 $RESET_HEIGHT = TRUE; // Reset layout height
 
 // Class path

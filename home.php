@@ -3,7 +3,9 @@ include "include/header.php";
 include "include/sidebar.php";
 include "include/connection.php";
 ?>
-
+<!-- Icon Font Stylesheet -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -56,7 +58,7 @@ include "include/connection.php";
                         <p>CATEGORY</p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-grid"></i>
+                        <i class="glyphicon glyphicon-th-large"></i>
                     </div>
                     <a href="category.php" class="small-box-footer">More info <i
                             class="fa fa-arrow-circle-right"></i></a>
@@ -76,7 +78,7 @@ include "include/connection.php";
                         <p>SUBCATEGORY</p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-grid"></i>
+                        <i class="glyphicon glyphicon-th"></i>
                     </div>
                     <a href="sub_cat.php" class="small-box-footer">More info <i
                             class="fa fa-arrow-circle-right"></i></a>

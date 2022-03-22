@@ -32,16 +32,19 @@ include "include/connection.php";
                     <th scope="col">IMAGE</th>
                     <th scope="col">HSN_CODE</th>
                     <th scope="col">GST_NO.</th>
+                    <th scope="col">Seller</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                 $sql = "SELECT * FROM `product`";
                 $result = mysqli_query($conn,$sql);
+                $sql2 = "SELECT * FROM user join product on user.idRegister=product.User_idRegister";
+                $result2 =mysqli_query($conn,$sql2);
                 $cnt=1; 
-                while($rows = mysqli_fetch_assoc($result)){
+                while(($rows = mysqli_fetch_assoc($result)) && ($rows2 = mysqli_fetch_assoc($result2))){
                    echo" <tr>
-                        <th>". $cnt ."</th>
+                        <th>".$rows['idproduct'] ."</th>
                         <td>". $rows['pname'] ."</td>
                         <td>". $rows['brand'] ."</td>
                         <td>". $rows['minimum_set_qut-pur'] ."</td>
@@ -52,6 +55,7 @@ include "include/connection.php";
                         <td><img src='".$rows['image']."' height='100' width='100'>"."</td>
                         <td>". $rows['HSN_code'] ."</td>
                         <td>". $rows['GST_rate'] ."</td>
+                        <td>". $rows2['bussiness_name'] ."</td>
                     </tr>";
                     $cnt++;   
                 }
