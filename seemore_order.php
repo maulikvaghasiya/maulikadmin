@@ -16,9 +16,10 @@ $sql11 = "SELECT * FROM sales_product_details LEFT OUTER JOIN sales_orders ON sa
 $res11 = mysqli_query($conn, $sql11);
 $row111 = mysqli_fetch_assoc($ress);
 echo'
-<table class="table table-bordered">
-<tbody>
-    <tr class="active">
+<table class="table table-bordered 
+">
+<tbody >
+    <tr class="">
         <th><h4><b>ORDER No. : ODR00' . $orderid . '</b></h4>
       </th>
        ';
@@ -62,15 +63,16 @@ echo '
 echo '
 <tr>
 <td colspan="2" align="right"><b>Taxable Amount :</b></td>
-<td><b>₹ ' . $total . '</b><small><b>.00</b></small></td>
+<td><b>₹ ' . $total . '</b><b>.00</b></td>   
+
 </tr>
 <tr>
         <td colspan="2" align="right"><b>Gst Amount :</b></td>
-        <td><b>₹ ' . $summ . '</b><small><b>.00</b></small></td>
+        <td><b>₹ ' . $summ . '</b><small><b></b></small></td>
     </tr>
     <tr>
         <td colspan="2" align="right"><b>Total Amount :</b></td>
-        <td><b>₹ ' . $final . '</b><small><b>.00</b></small></td>
+        <td><b>₹ ' . $final . '</b><small><b></b></small></td>
     </tr>
 </tbody>
 </table>';

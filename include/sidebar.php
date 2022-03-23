@@ -60,7 +60,7 @@
          </ul>
          <ul class="sidebar-menu">
              <li>
-                 <a href="/admin/aa/view2rpt.php">
+                 <a href="/admin/report/index.php">
                      <i class="fa fa-chart-bar me-2"></i>&nbsp;
                      <span>Report</span>
                  </a>

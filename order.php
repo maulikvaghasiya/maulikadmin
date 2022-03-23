@@ -2,6 +2,7 @@
 include "include/header.php";
 include "include/sidebar.php";
 include "include/connection.php";
+
 ?>
 
 
@@ -24,9 +25,6 @@ include "include/connection.php";
                 <tr>
                     <th scope="col">Order No.</th>
                     <th scope="col">Address</th>
-                    <th scope="col">Taxable Amount</th>
-                    <th scope="col">Tax amount</th>
-                    <th scope="col">Total Amount</th>
                     <th scope="col">Order Date</th>
                     <th scope="col">Last Shipping Date</th>
                     <th scope="col">More Details</th>
@@ -42,9 +40,6 @@ include "include/connection.php";
                 echo "<tr>
                     <th>". $row['idsales_orders'] ."</th>
                     <td>". $row['address'] ."</td>
-                    <td>". $row['taxable_amount'] ."</td>
-                    <td>". $row['tax_amount'] ."</td>
-                    <td>". $row['net_amount'] ."</td>
                     <td>". $row['order_date'] ."</td>
                     <td>". $row['last_shipping_date'] ."</td>
                     <td><a href='seemore_order.php?idSales=".$row['idsales_orders']."' type='button' class='btn btn-primary'>See More</a></td>
